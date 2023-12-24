@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicla tu ropa</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&family=Ysabeau+Infant:wght@300&display=swap" rel="stylesheet">
+</head> 
+    <select id="dropdownMenu" onchange="redirectToPage(this.value)">
+        <option value="" selected disabled>Menú</option>
+        <option value="quienes_somos.html">Quiénes somos</option>
+        <option value="donde_estamos.html">Dónde estamos</option>
+        <option value="#compramos_tu_ropa">Compramos tu ropa</option>
+    </select>
+</nav>
+
+<body>
+<header>  
+    <div id="inicio" style="text-align: center;"> 
+        <img src="Imagenes/Recicla tu ropa.png-fotor-bg-remover-20231221205453.png" alt="" width="500">
+    </div>
+</header>
+<main>
+    <section id="categories">
+        <h3> <img src="Imagenes/Categorias (1)-fotor-bg-remover-20231222215616.png" alt="" width="300"></h3>
+        <div class="category-container">
+            <section class="category">
+                <img src="Polleras/Imagen de WhatsApp 2023-12-22 a las 10.11.12_949c4428.jpg" alt="">
+                <h3>Vestidos y polleras</h3>
+                <br>
+                <a class="redirectButton" href="plleras.html"> ir</a>
+            </section>
+            <section class="category">
+                <img src="Remeras/Imagen de WhatsApp 2023-12-22 a las 12.36.48_665c39e3.jpg" alt="">
+                <h3>Remeras</h3>
+                <a class="redirectButton" href="tops.html">Ir</a>
+            </section>
+            <section class="category">
+                <img src="pantalones/Imagen de WhatsApp 2023-12-22 a las 14.54.58_465fa003.jpg" alt="">
+                <div>
+                <h3>Pantalones y shorts</h3>
+                <br>
+                <br>
+                <a class="redirectButton" href="bottoms.html">Ir</a>
+            </section>
+            <section class="category">
+                <img src="Abrigos/Imagen de WhatsApp 2023-12-22 a las 12.33.03_784f5da8.jpg" alt="">
+                <h3>Abrigos</h3>
+                <a class="redirectButton" href="bottoms.html">Ir</a>
+            </div>
+            </section>
+        </div>        
+    </section>
+</main>
+    <nav>
+    <section id="categories">
+        <section id="categories">
+            <h1 style="text-align: center;"> <a href="https://economiacircular.org/economia-circular/"> ¿Qué es la economía circular? </a></h1>
+        </section>
+    <div class="Container">
+        <div class="box"> <h3><img src="Imagenes/reusar png.png" alt="" width="150"> <br>El Segundo estreno</h3>
+            <p>Busca reintroducir en el campo económico a todos aquellos productos que no cubren las necesidades principales por las cuales fueron adquiridos por los consumidores.</p>
+        </div>
+        <div class="box">    <h3><img src="Imagenes/feria-fotor-bg-remover-2023122221857.png" alt="" width="200"> <br> <br>Conciencia sobre la sostenibilidad</h3>
+        
+            <p>El comprar ropa de segunda también desempeña un papel importante en la concientización sobre la sostenibilidad, ya que destacan la importancia de la reutilización y la reducción de residuos.</p>
+        </div>
+        <div class="box">
+            <h3><img src="Imagenes/planeta-fotor-bg-remover-20231222212420.png" alt="" width="200"> <br>Fomento del consumo responsable</h3>
+            <p>El adquirir ropa de segunda mano ayuda a ahorrar agua y energía al reutilizar la ropa existente y disminuir la demanda de ropa nueva.Esto conduce a una reducción del consumo impulsivo y de productos de un solo uso.</p>
+        </div>
+    </section>
+
+    <section id="compramos_tu_ropa">
+        <h2>Compramos tu ropa</h2>
+        <form action="procesar_formulario.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="telefono">Teléfono de contacto:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="categoria">Categoría de prendas a ofrecer:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="camisas">Camisas</option>
+                <option value="pantalones">Pantalones</option>
+                <option value="vestidos">Vestidos</option>
+            </select>
+            <label for="cantidad">Cantidad de prendas:</label>
+            <input type="number" id="cantidad" name="cantidad" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <script>
+            // vuelve la página a la seleccion del desplegable
+            function redirectToPage(value) {
+                if (value && value.startsWith("#")) {
+                    document.getElementById(value.substring(1)).scrollIntoView({ behavior: 'smooth' });
+                } else if (value) {
+                    window.location.href = value;
+                }
+            }
+        </script>
+
+<footer>
+    <div id="redes-sociales">
+        <a href="https://www.instagram.com/reciclothingferia/" target="_blank" title="Instagram"><img src="Imagenes/icons8-instagram-64.png" alt="Instagram"></a>
+        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><img src="Imagenes/icons8-whatsapp-64.png" alt="WhatsApp"></a>
+    </div>
+</footer>
+</body>
+</html>
