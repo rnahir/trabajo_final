@@ -125,12 +125,11 @@ form {
 /*pantallas más grandes*/
 @media only screen and (min-width: 701px) {
     form {
-        display: flex;
-        flex-direction: colum; 
-        justify-content: space-between;
-        align-items: center; 
-        width: 60%; 
-        margin: 0 auto; 
+        flex-direction: row; /* Mantén la dirección horizontal en pantallas más grandes */
+        justify-content: space-between; /* Distribuye los elementos horizontalmente */
+        align-items: center; /* Centra verticalmente los elementos */
+        width: 60%; /* Puedes ajustar el ancho según tus preferencias */
+        margin: 0 auto; /* Centra el formulario en la pantalla */
     }
 }
 
