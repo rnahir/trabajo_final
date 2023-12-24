@@ -100,9 +100,8 @@ h2{
 
 
 }
+
 form {
-    display: flex;
-    flex-direction: column; 
     padding: 10px;
     font-family: 'Rajdhani', sans-serif;
     font-size: 16px;
@@ -113,11 +112,28 @@ form {
     cursor: pointer;
 }
 
+/* dispositivos con un ancho máximo de 700px */
 @media only screen and (max-width: 700px) {
     form {
+        display: flex;
+        flex-direction: column; 
         width: 80%; 
         margin: 0 auto; 
     }
+}
+
+/*pantallas más grandes*/
+@media only screen and (min-width: 701px) {
+    form {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: center; 
+        width: 60%; 
+        margin: 0 auto; 
+    }
+}
+
 footer {
     background-color: #b9d191;
     color: #fff;
@@ -125,7 +141,6 @@ footer {
     padding: 20px;
 }
 
-/* Estilos de los iconos de redes sociales */
 #redes-sociales {
     display: flex;
     justify-content: center;
@@ -138,6 +153,6 @@ footer {
 }
 
 #redes-sociales img {
-    width: 40px; /* Ajusta el tamaño según tus necesidades */
+    width: 40px; 
     height: auto;
 }
