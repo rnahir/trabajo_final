@@ -126,10 +126,10 @@ form {
 @media only screen and (min-width: 701px) {
     form {
         display: flex;
-        flex-direction: row; 
+        flex-direction: colum; 
         justify-content: space-between;
         align-items: center; 
-        width: 60%; 
+        width: 0 auto; 
         margin: 20%; 
     }
 }
